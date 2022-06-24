@@ -31,7 +31,7 @@ function movieReducer(state, action) {
         ...state,
         selected: action.payload,
         buttons: state.buttons.map((b) => {
-          if (b.name === action.payload) {
+          if (b.name === action.payload.name) {
             return { ...b, active: true };
           } else return { ...b, active: false };
         }),

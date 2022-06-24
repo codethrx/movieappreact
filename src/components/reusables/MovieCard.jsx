@@ -1,8 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { fadeAnime } from "../../anime";
+import { useNavigate } from "react-router-dom";
 function MovieCard({ title, imgpath, id }) {
   const imagepathPrefix = `https://image.tmdb.org/t/p/w500`;
+  const navigate = useNavigate();
   return (
     <motion.div
       layout
@@ -15,6 +17,7 @@ function MovieCard({ title, imgpath, id }) {
       <div className="hide">
         {" "}
         <motion.img
+          onClick={() => navigate(`/movies/${id}`)}
           whileHover={{
             scale: 1.1,
           }}

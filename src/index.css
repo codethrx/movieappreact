@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Fascinate&family=Poppins&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -10,16 +11,36 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: "Poppins", sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
 .app {
-  padding: 5rem 10rem;
+  padding: 3rem 10rem;
+}
+#logo {
+  font-family: "Fascinate", cursive;
+  color: rgb(65, 98, 168);
+  font-size: 2rem;
 }
 
-.btn {
-  color: aliceblue;
+button {
+  padding: 0.3rem 0.2rem;
+  font-size: 0.8rem;
+  border: none;
+  border: 0.1px solid rgb(65, 98, 168);
+  cursor: pointer;
+  background: transparent;
+  color: rgb(65, 98, 168);
+  width: 4rem;
+  outline: none;
+  transition: 0.4s ease;
+  margin-right: 0.14rem;
+}
+button:hover {
+  background-color: rgb(65, 98, 168);
+  color: white;
+}
+.filter-btn-active {
+  background-color: rgb(65, 98, 168);
+  color: white;
 }
