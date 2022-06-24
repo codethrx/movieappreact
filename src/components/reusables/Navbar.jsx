@@ -5,10 +5,9 @@ function Navbar() {
   const navigate = useNavigate();
   return (
     <StyledNav>
-      <h3 id="logo">MoviezX</h3>
-      <div className="nav-buttons">
-        <button onClick={() => navigate("/")}>Home</button>
-      </div>
+      <h3 id="logo" onClick={() => navigate("/")}>
+        MoviezX
+      </h3>
     </StyledNav>
   );
 }
@@ -19,9 +18,8 @@ const StyledNav = styled.nav`
   align-items: center;
   justify-content: space-evenly;
   margin-bottom: 1rem;
-  button {
-    border: 1px solid rgb(65, 98, 168);
-    font-weight: bold;
+  #logo {
+    cursor: pointer;
   }
 `;
 export default Navbar;

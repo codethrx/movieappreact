@@ -58,7 +58,7 @@ function MovieContextProvider({ children }) {
   //fetching data of movies
   const fetchMovies = useCallback(async () => {
     const movies = await axios.get(url);
-    console.log(movies);
+    console.log(movies.data.results);
     dispatch({ type: "SET_MOVIES", payload: movies.data.results });
   }, [url]);
   useEffect(() => {

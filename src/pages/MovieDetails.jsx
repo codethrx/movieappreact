@@ -10,7 +10,7 @@ function MovieDetails() {
   const [movie, setMovie] = useState(null);
   const KEY = import.meta.env.VITE_API_KEY;
   const url = `https://api.themoviedb.org/3/movie/${movieID}?api_key=${KEY}`;
-  const imagepathPrefix = `https://image.tmdb.org/t/p/w500`;
+  const imagepathPrefix = `https://image.tmdb.org/t/p/w400`;
   console.log(url);
   const fetchMovieData = useCallback(async () => {
     const movieData = await axios.get(url);
@@ -43,10 +43,10 @@ function MovieDetails() {
               />
             </div>
             <p>{movie.data.overview}</p>
-            <img
+            {/* <img
               src={`${imagepathPrefix}${movie.data.backdrop_path}`}
               alt={`alternate-media-${movieID}`}
-            />
+            /> */}
           </MovieDetailStyle>
         </AnimatePresence>
       )}
@@ -61,13 +61,14 @@ const MovieDetailStyle = styled(motion.div)`
     justify-content: space-between;
     h3 {
       font-weight: bold;
-      font-size: 2rem;
+      font-size: 1.7rem;
       font-family: "Poppins";
       color: rgb(65, 98, 168);
+      width: 60%;
     }
     h4 {
       font-weight: lighter;
-      font-size: 1.4rem;
+      font-size: 1.2rem;
     }
   }
   .media {
